@@ -4,12 +4,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CHESS</title>
 <style>
-td{
-	position: relative;
-}	
+
 tr{
 	height: 60px;
-	
 	background-color:turquoise;
 	border-collapse: collapse;
 }
@@ -19,11 +16,36 @@ margin:auto;
 width:500px;
 text-align: center;
 font-size: 45px;
-
+cursor: pointer;
 }
 #w{
 	background-color: white;
 }
+.tooltip {
+  
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  font-size: 3px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 2;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+
+}
+
 
 </style>
 
@@ -33,24 +55,70 @@ font-size: 45px;
 		
 	<table >
 	<tr >
-<td id='w'> &#9814;</td>
-<td>&#9816;</td>
-<td id='w'>&#9815;</td>
-<td>&#9812;</td>
-<td id='w'>&#9813;</td>
-<td>&#9815;</td>
-<td id='w'>&#9816;</td>
-<td>&#9814;</td>
+		<td id='w'
+		class="tooltip">&#9814;
+		  <span class="tooltiptext">ROOK: can take multiple steps either horizontally or vertically</span>
+		</td>
+		<td class="tooltip">&#9816;
+		  <span class="tooltiptext">KNIGHT: can move two squares vertically and one square horizontally or two squares horizontally and one square vertically</span>
+		</td>
+
+		<td id='w'
+		class="tooltip">&#9815;
+		  <span class="tooltiptext">BISHOP: can take multiple steps diagonally either forward or backward</span>
+		</td>
+		<td class="tooltip">&#9812;
+		  <span class="tooltiptext">KING: can take one step in any direction</span>
+		</td>
+
+		<td id='w'
+		class="tooltip">&#9813;
+		  <span class="tooltiptext">QUEEN: can move either like a Bishop or like a Rook</span>
+		</td>
+		<td class="tooltip">&#9815;
+		  <span class="tooltiptext">BISHOP: can take multiple steps diagonally either forward or backward</span>
+		</td>
+
+		<td id='w'
+		class="tooltip">&#9816;
+		  <span class="tooltiptext">KNIGHT: can move two squares vertically and one square horizontally or two squares horizontally and one square vertically</span>
+		</td>
+		<td class="tooltip">&#9814;
+		  <span class="tooltiptext">ROOK: can take multiple steps either horizontally or vertically</span>
+		</td>
+		
 </tr>
 <tr >
-	<td>&#9817;</td>
-	<td id='w'>&#9817;</td>
-	<td>&#9817;</td>
-	<td id='w'>&#9817;</td>
-	<td>&#9817;</td>
-	<td id='w'>&#9817;</td>
-	<td>&#9817;</td>
-	<td id='w'>&#9817;</td>
+	<td class="tooltip">&#9817;
+		<span class="tooltiptext">PAWN: can move one step forward</span>
+	  </td>
+	<td id='w'
+	class="tooltip">&#9817;
+	  <span class="tooltiptext">PAWN: can move one step forward</span>
+	</td>
+	<td class="tooltip">&#9817;
+		<span class="tooltiptext">PAWN: can move one step forward</span>
+	  </td>
+	<td id='w'
+	class="tooltip">&#9817;
+	  <span class="tooltiptext">PAWN: can move one step forward</span>
+	</td>
+	<td class="tooltip">&#9817;
+		<span class="tooltiptext">PAWN: can move one step forward</span>
+	  </td>
+	<td id='w'
+	class="tooltip">&#9817;
+	  <span class="tooltiptext">PAWN: can move one step forward</span>
+	</td>
+	<td class="tooltip">&#9817;
+		<span class="tooltiptext">PAWN: can move one step forward</span>
+	  </td>
+	<td id='w'
+	class="tooltip">&#9817;
+	  <span class="tooltiptext">PAWN: can move one step forward</span>
+	</td>
+	
+	
 	
 	</tr>
 	<tr >
@@ -96,25 +164,70 @@ font-size: 45px;
 	
 	</tr>
 	<tr >
-<td id='w'>&#9823;</td>
-<td>&#9823;</td>
-<td id='w'>&#9823;</td>
-<td>&#9823;</td>
-<td id='w'>&#9823;</td>
-<td>&#9823;</td>
-<td id='w'>&#9823;</td>
-<td>&#9823;</td>
+		<td id='w'
+		class="tooltip">&#9823;
+		  <span class="tooltiptext">PAWN: can move one step forward</span>
+		</td>
+		<td class="tooltip">&#9823;
+		  <span class="tooltiptext">PAWN: can move one step forward</span>
+		</td>
+
+		<td id='w'
+		class="tooltip">&#9823;
+		  <span class="tooltiptext">PAWN: can move one step forward</span>
+		</td>
+		<td class="tooltip">&#9823;
+		  <span class="tooltiptext">PAWN: can move one step forward</span>
+		</td>
+
+		<td id='w'
+		class="tooltip">&#9823;
+		  <span class="tooltiptext">PAWN: can move one step forward</span>
+		</td>
+		<td class="tooltip">&#9823;
+		  <span class="tooltiptext">PAWN: can move one step forward</span>
+		</td>
+
+		<td id='w'
+		class="tooltip">&#9823;
+		  <span class="tooltiptext">PAWN: can move one step forward</span>
+		</td>
+		<td class="tooltip">&#9823;
+		  <span class="tooltiptext">PAWN: can move one step forward</span>
+		</td>
 </tr>
 <tr >
-	<td>&#9820;</td>
-	<td id='w'>&#9822;</td>
-	<td>&#9821;</td>
-	<td id='w'>&#9818;</td>
-	<td>	&#9819;</td>
-	<td id='w'>&#9821;</td>
-	<td>&#9822;</td>
-	<td id='w'>&#9820;</td>
 	
+	
+
+	<td class="tooltip">&#9820;
+		<span class="tooltiptext">ROOK: can take multiple steps either horizontally or vertically</span>
+	  </td>
+	<td id='w'
+	class="tooltip">&#9822;
+	  <span class="tooltiptext">KNIGHT: can move two squares vertically and one square horizontally or two squares horizontally and one square vertically </span>
+	</td>
+	<td class="tooltip">&#9821;
+		<span class="tooltiptext">BISHOP: can take multiple steps diagonally either forward or backward</span>
+	  </td>
+	<td id='w'
+	class="tooltip">&#9818;
+	  <span class="tooltiptext">KING: can take one step in any direction</span>
+	</td>
+	<td class="tooltip">&#9819;
+		<span class="tooltiptext">QUEEN: can move either like a Bishop or like a Rook</span>
+	  </td>
+	<td id='w'
+	class="tooltip">&#9821;
+	  <span class="tooltiptext">BISHOP: can take multiple steps diagonally either forward or backward</span>
+	</td>
+	<td class="tooltip">&#9822;
+		<span class="tooltiptext">KNIGHT: can move two squares vertically and one square horizontally or two squares horizontally and one square vertically</span>
+	  </td>
+	<td id='w'
+	class="tooltip">&#9820;
+	  <span class="tooltiptext">ROOK: can take multiple steps either horizontally or vertically</span>
+	</td>
 	</tr>
 </table>
 </div>
